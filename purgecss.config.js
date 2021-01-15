@@ -16,7 +16,7 @@ module.exports = {
         'g-image--lazy',
         'g-image--loaded',
     ],
-    whitelistPatterns: [/^nav__link/, /^active/, /^w-/, /^md:w-/, /^bg-/, /^text-/, /^border-/],
+    whitelistPatterns: [/^nav__link/, /^active/, /^w-/, /^md:w-/, /^bg-/, /^text-/, /^border-/, /^from-/, /^to-/],
     extractors: [
         {
             extractor: content => content.match(/[A-z0-9-:\\/]+/g),

@@ -46,6 +46,6 @@
     "title":"Use templates",
     "description":"Except the content creation, you might get stuck on how to design the course - but with the Reducate Template Store you can just choose one that fits you and get going in seconds",
     "icon":"<svg class='fill-current' x='0px' y='0px' width='24' height='24' viewBox='0 0 172 172'><g><path d='M35.83333,21.5c-7.83362,0 -14.33333,6.49972 -14.33333,14.33333v100.33333c0,7.83362 6.49972,14.33333 14.33333,14.33333h100.33333c7.83362,0 14.33333,-6.49972 14.33333,-14.33333v-100.33333c0,-7.83362 -6.49972,-14.33333 -14.33333,-14.33333zM35.83333,57.33333h100.33333v78.83333h-100.33333zM50.16667,71.66667v14.33333h71.66667v-14.33333zM50.16667,93.16667v35.83333h28.66667v-35.83333zM93.16667,93.16667v35.83333h28.66667v-35.83333z'></path></g></svg>",
-    "iconcolor":"bg-yellow-100 text-yellow-500 bg-opacity-50"
+    "iconcolor":"bg-yellow-300 text-yellow-800 bg-opacity-50"
   }
 ]
