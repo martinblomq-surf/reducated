@@ -1,0 +1,196 @@
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+.form--wrapper{
+
+    h3{
+        font-size:1.1rem;
+        font-weight:300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .form-icon {
+        position: relative;
+
+        .form-icon--inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            margin-left: 1.5rem;
+            margin-top: 1.15rem;
+
+            svg {
+                
+                g {
+                    fill: inherit;
+                }
+
+                max-width:18px;
+                max-height:18px;
+                @apply fill-current w-full h-full text-purple-900;
+            }
+        }
+
+        input[type="text"], input[type="search"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="color"], textarea {
+            padding-left:3.5rem;
+        }
+    }
+    
+
+    input[type="text"], input[type="search"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="color"], textarea {
+        @apply text-gray-900 border border-purple-100;
+        padding: .8rem 2rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        min-height: 54px;
+        width:100%;
+        -webkit-appearance: none;
+        border-radius:6px;
+
+        &::placeholder{
+            @apply text-purple-900;
+        }
+    }
+
+    textarea{
+        min-height:150px;
+    }
+
+    input[type="submit"] {
+        min-height: 54px;
+        @apply bg-purple-500 shadow-btn text-white uppercase py-4 px-10 text-sm font-bold border-0 rounded-full;
+        
+        &:hover{
+            @apply bg-purple-800;
+        }
+    }
+
+    .content__gdpr {
+        margin-top: 1rem;
+        font-size: .7rem;
+    }
+
+    &.form-lightblue {
+        input[type="text"], input[type="search"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="color"], textarea{
+            @apply bg-purple-100 bg-opacity-10;
+        }
+    }
+    &.form-light {
+        input[type="text"], input[type="search"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="color"], textarea{
+            @apply bg-purple-100 bg-opacity-10;
+        }
+    }
+
+    .file--dropzone__block {
+        @apply border-purple-500 border-2 border-dashed bg-white relative rounded-sm;
+
+        &.file--dropzone--success{
+            @apply bg-green-500 bg-opacity-10 border-green-500 border-opacity-30;
+            padding-bottom:4rem !important;
+        }
+
+        &:hover{
+            @apply bg-purple-500 bg-opacity-10;
+        }
+
+        input{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            z-index:1;
+            opacity:0;
+        }
+
+        svg{
+            width: 100%;
+            height: 100%;
+            max-width: 60px;
+            max-height: 60px;
+        }
+        .filed--dropzone--icon--success {
+            @apply bg-green-500;
+            width: 48px;
+            height: 48px;
+            margin: 0 auto .5rem;
+            border-radius: 100%;
+            position: relative;
+
+            &:after {
+                content: '';
+                width: 12px;
+                height: 24px;
+                border-right: 4px solid;
+                border-bottom: 4px solid;
+                border-color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: rotate(45deg);
+                margin-top: -13px;
+                margin-left: -6px;
+            }
+        }
+    }
+    .file--dropzone{
+        position:relative;
+
+        .remove{
+            z-index:3;
+            position:relative;
+            cursor:pointer;
+            position:absolute;
+            bottom:1rem;
+            left:0;
+            width:100%;
+            
+            &:hover{
+                @apply text-red-500;
+            }
+        }
+    }
+}
+
+@media(max-width:767px){
+    .form--wrapper {
+        h3 {
+            font-size: .9rem;
+        }
+
+        .submit-button--wrapper {
+            width: 100%;
+    
+            input[type="submit"] {
+                width: 100%;
+            }
+        }
+
+        input[type="text"], input[type="search"], input[type="tel"], input[type="url"], input[type="email"], input[type="password"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="number"], input[type="color"], textarea{
+            font-size:1rem;
+        }
+    }
+}
+
+.cta__block.bg-dark{
+    position:relative;
+
+    &:after {
+        @apply border-gray-900;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: -1;
+        border-radius: 2.3rem;
+        top: .6rem;
+        left: .6rem;
+        border-right: .3rem solid;
+        border-bottom: .3rem solid;
+    }
+}

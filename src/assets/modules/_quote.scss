@@ -1,0 +1,54 @@
+.quote__block--outer{
+    
+    .quote__block{
+        position:relative;
+    
+        &:after {
+            @apply absolute w-full h-full bg-transparent -z-1 border-gray-900;
+            content: '';
+            border-radius: 2.3rem;
+            top: .6rem;
+            left: .6rem;
+            border-right: .3rem solid;
+            border-bottom: .3rem solid;
+        }
+        
+        blockquote {
+            max-width: 720px;
+            margin: auto;
+
+            p {
+                font-size: 3rem;
+                font-style: italic;
+                font-weight: 300;
+                position: relative;
+                z-index: 1;
+
+                @media(max-width:767px){
+                    font-size: 2rem;
+                }
+
+                &::after {
+                    content: '\201d';
+                    font-style: normal;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    font-size: 25rem;
+                    line-height: 1;
+                    margin-left: -4rem;
+                    margin-top: -2.5rem;
+                    opacity: .2;
+                    z-index: -1;
+
+                    @media(max-width:767px){
+                        font-size: 15rem;
+                        margin-left: -3rem;
+                        margin-top: -1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

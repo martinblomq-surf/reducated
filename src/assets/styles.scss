@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind screen;
+
+@import '/modules/header.scss';
+@import '/modules/textimage.scss';
+@import '/modules/quote.scss';
+@import '/modules/forms.scss';
+
+
+body{
+    @apply font-body bg-white text-base;
+
+    h1, h2, h3, h4, h5, h6{
+        @apply font-display leading-1;
+    }
+
+    ::selection{
+        @apply bg-orange-300 text-white;
+    }
+
+    section{
+        @apply md:py-32 py-16;
+    }
+
+    .container{
+        margin:auto;
+    }
+    .container-text {
+        max-width: 720px;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                padding-left: 24px;
+                position: relative;
+                margin-bottom: 10px;
+    
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 8px;
+                    height: 14px;
+                    border-right: 2px solid;
+                    border-bottom: 2px solid;
+                    left: 0;
+                    transform: rotate(45deg);
+                    margin-top: 2px;
+                    margin-left: 2px;
+                }
+            }
+        }
+
+        article{
+            h2, h3, h4, h5{
+                margin-top:2.5rem;
+                margin-bottom:1.35rem;
+            }
+            h3{
+                font-size: 2rem;
+
+                @media(max-width:767px){
+                    font-size:1.75rem;
+                }
+            }
+            p{
+                font-size: 1.25rem;
+                font-weight: 300;
+
+                @media(max-width:767px){
+                    font-size:1.1rem;
+                }
+            }
+        }
+    }
+
+    a,
+    input,
+    button,
+    textarea{
+        transition: all .2s ease !important;
+
+        &:hover{
+            text-decoration: none;
+        }
+        &:focus{
+            outline:none;
+        }
+    }
+
+    input,
+    textarea{
+        &:focus{
+            opacity:.8;
+        }
+    }
+    
+    .overlay{
+        
+        a:not(.btn) {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+
+            &:not(.btn):hover{
+                opacity:.5;
+            }
+        }
+    }
+
+    
+    @media(max-width:767px){
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2{
+            font-size:2rem;
+        }
+        h4, .h4 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .toolbox__block--wrapper {
+        .toolbox__block{
+            min-width:2rem;
+            min-height:2rem;
+        }
+        
+        @for $i from 1 through 26 {
+            $yax: random(6);
+            $xax: random(6);
+            $speed: 30/random(8);
+            $delay: 1/random(3);
+            $size: random(5);
+
+            @keyframes moveAround-#{$i}{
+                0%{
+                    transform:translate(0, 0)
+                }
+                25%{
+                    transform:translate(#{$xax}px, #{$yax}px)
+                }
+                50%{
+                    transform:translate(#{-$xax}px, #{-$yax}px)
+                }
+                75%{
+                    transform:translate(#{$xax}px, #{$yax}px)
+                }
+                100%{
+                    transform:translate(0, 0)
+                }
+            }
+            &:nth-child(#{$i}) {
+                animation: moveAround-#{$i} 7s linear infinite #{$delay}s;
+
+                .toolbox__block{
+                    width:#{$size}rem;
+                    height:#{$size}rem;
+                }
+            }
+        }
+    }
+}
+
+@tailwind components;
+@tailwind utilities;

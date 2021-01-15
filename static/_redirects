@@ -1,0 +1,5 @@
+# Redirect default Netlify subdomain to primary domain
+https://surfboardpayments.netlify.com/* https://www.surfboard.se/:splat 301!
+/the-big-shift /background
+/the-big-wave /background
+/internship https://www.notion.so/surfboard/Surfboard-Internship-2020-Winter-Batch-d5d3f0a6f9bc4574971a6ed1638b64ec 302
